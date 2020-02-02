@@ -1,9 +1,9 @@
 from flask import Flask, render_template, url_for
-from datetime import datetime
-from flask_moment import Moment
+from flask_bootstrap import Bootstrap
 
 # objects
 app = Flask(__name__)
+bootstrap = Bootstrap(app)
 
 # Dummy Data for Fake Blog Posts
 posts = [
@@ -22,14 +22,20 @@ posts = [
 ]
 
 # Error Messages
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
 
+@app.errorhandler(500)
+def internal_server_error(e):
+    return render_template('500.html'), 500
 
 # Routes
 
 @app.route('/')
 @app.route('/home')
 def index():
-    return render_template('home.html', 
+    return render_template('home.html',
             posts=posts)
 
 @app.route('/about')

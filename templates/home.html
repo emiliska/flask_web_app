@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
-{% block content %}
+
+{% block page_content %}
   {% for post in posts %}
     <article class="media content-section">
       <div class="media-body">
@@ -12,5 +13,5 @@
       </div>
     </article>
   {% endfor %}
-{% endblock content %}
+{% endblock page_content %}
 
