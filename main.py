@@ -5,21 +5,21 @@ from flask_bootstrap import Bootstrap
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
 
-# Dummy Data for Fake Blog Posts
-posts = [
-        {
-            'author': 'Emily Eubanks',
-            'title': 'Blog Post 1',
-            'content': 'First post content',
-            'date_posted': 'January 29, 2020'
-        },
-        {
-            'author': 'Emily Eubanks',
-            'title': 'Blog Post 2',
-            'content': 'Second post content',
-            'date_posted': 'January 28, 2020'
-        }
+# posts
+posts=[
+    {
+        'author': 'Emily Eubanks',
+        'title': 'Blog Post 1',
+        'content': 'First post created',
+        'date_posted': 'January 29, 2020'
+    },{
+        'author': 'Emily Eubanks',
+        'title': 'Blog Post 1',
+        'content': 'First post created',
+        'date_posted': 'January 29, 2020'
+    }
 ]
+
 
 # Error Messages
 @app.errorhandler(404)

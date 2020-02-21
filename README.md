@@ -5,9 +5,12 @@ experimenting with flask web apps!
 #### 0. Required Packages
 `pip install flask` <br>
 `pip install flask-bootstrap` <br>
-`pip install flask-alchemy`
+`pip install flask-sqlalchemy`
+
 #### 1. Set environment variables
 `export FLASK_APP="main.py"` <br>
-`export FLASK_DEBUG=1`
+To turn on debugging and auto-refresh changes: <br>
+`export FLASK_DEBUG=1` <br>
+
 #### 2. Run the app
 `flask run`
